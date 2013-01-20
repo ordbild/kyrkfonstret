@@ -22,7 +22,7 @@ end
 
 gem 'jquery-rails'
 
-gem "ember-rails"
+gem 'ember-rails', :git => 'git://github.com/emberjs/ember-rails.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
