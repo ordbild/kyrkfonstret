@@ -20,7 +20,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails', :git => 'git@github.com:rails/jquery-rails.git'
+gem 'jquery-rails'#, :git => 'git@github.com:rails/jquery-rails.git'
 
 # Compass
 gem 'compass'
