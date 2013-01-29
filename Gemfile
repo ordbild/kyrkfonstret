@@ -14,6 +14,10 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
+  # Compass
+  gem 'compass'
+  gem 'compass-rails'
+  
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -22,9 +26,6 @@ end
 
 gem 'jquery-rails'#, :git => 'git@github.com:rails/jquery-rails.git'
 
-# Compass
-gem 'compass'
-gem 'compass-rails'
 
 # Ember
 gem 'ember-rails', :git => 'git://github.com/emberjs/ember-rails.git'
