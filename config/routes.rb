@@ -1,4 +1,9 @@
 KF::Application.routes.draw do
+  devise_for :users
+
+  resources :documents
+
+
   resources :templates
 
 

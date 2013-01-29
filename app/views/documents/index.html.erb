@@ -1,0 +1,33 @@
+<h1>Listing documents</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>User</th>
+    <th>Template</th>
+    <th>Content</th>
+    <th>Cover image</th>
+    <th>Public</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @documents.each do |document| %>
+  <tr>
+    <td><%= document.title %></td>
+    <td><%= document.user %></td>
+    <td><%= document.template.title %></td>
+    <td><%= document.content %></td>
+    <td><%= image_tag document.cover_image.thumb('100x100').url if document.cover_image %></td>
+    <td><%= document.public %></td>
+    <td><%= link_to 'Show', document %></td>
+    <td><%= link_to 'Edit', edit_document_path(document) %></td>
+    <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Document', new_document_path %>

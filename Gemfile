@@ -20,15 +20,32 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', :git => 'git@github.com:rails/jquery-rails.git'
 
+# Compass
+gem 'compass'
+gem 'compass-rails'
+
+# Ember
 gem 'ember-rails', :git => 'git://github.com/emberjs/ember-rails.git'
+
+# Dragonfly
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.12'
+
+# Auth
+gem 'devise'
+
+# Redactor
+# gem 'redactor-rails', :git => 'git@github.com:SammyLin/redactor-rails.git'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'

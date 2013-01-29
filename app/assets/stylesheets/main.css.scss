@@ -1,0 +1,150 @@
+@import "compass";
+// @import "redactor";
+
+$fonts-path: '';
+
+@font-face {
+  font-family: 'Foundry Sterling';
+  src: url($fonts-path + 'foustbko-webfont.eot');
+  src: local('☺'), url($fonts-path + 'foustbko-webfont.woff') format('woff'), url($fonts-path + 'foustbko-webfont.ttf') format('truetype'), url($fonts-path + 'foustbko-webfont.svg#webfontRZi4MKMP') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Foundry Sterling';
+  src: url($fonts-path + 'foustdmo-webfont.eot');
+  src: local('☺'), url($fonts-path + 'foustdmo-webfont.woff') format('woff'), url($fonts-path + 'foustdmo-webfont.ttf') format('truetype'), url($fonts-path + 'foustdmo-webfont.svg#webfontzF1jjzZt') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Foundry Sterling';
+  src: url($fonts-path + 'foustito-webfont.eot');
+  src: local('☺'), url($fonts-path + 'foustito-webfont.woff') format('woff'), url($fonts-path + 'foustito-webfont.ttf') format('truetype'), url($fonts-path + 'foustito-webfont.svg#webfontK6Z0j02g') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  background: #666;
+  padding-top: 50px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.document {
+  position: relative;
+  $width: 210mm;
+  $height: 297mm;
+  color: #000;
+  font-family: 'Foundry Sterling';
+
+  @include box-sizing(border-box);
+  background: #fff;
+  margin: 3em auto;
+  padding: 15mm;
+
+  &.portrait {
+    width: $width;
+    height: $height;
+  }
+
+  &.landscape {
+    width: $height;
+    height: $width;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.25em 0 0.5em 0;
+    line-height: 1.1;
+  }
+
+  p {
+    margin: 0.25em 0 0.5em 0;
+    line-height: 1.5;
+  }
+}
+
+.menubar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #e5e5e5;
+
+  a {
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      color: #555;
+    }
+  }
+
+  ul {
+    padding: 4px 8px;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+    margin-right: 1em; 
+  }
+}
+
+.header {
+  position: relative;
+  padding: 32px;
+  background: #ca0066;
+  height: 180px;
+}
+
+.header-content {
+  margin-left: 200px;
+}
+
+.symbol-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.symbol {
+  height: 200px;
+}
+
+.footer-content {
+  background: red;
+  position: absolute;
+  height: 100px;
+  bottom: 15mm;
+  left: 15mm;
+  width: 60%;
+}

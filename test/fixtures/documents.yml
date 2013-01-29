@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  user: 
+  template: 
+  content: 
+  cover_image_uid: MyString
+  cover_image_name: MyString
+  public: false
+
+two:
+  title: MyString
+  user: 
+  template: 
+  content: 
+  cover_image_uid: MyString
+  cover_image_name: MyString
+  public: false

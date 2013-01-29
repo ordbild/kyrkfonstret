@@ -18,7 +18,7 @@ class TemplatesControllerTest < ActionController::TestCase
 
   test "should create template" do
     assert_difference('Template.count') do
-      post :create, template: { title: @template.title }
+      post :create, template: { slug: @template.slug, title: @template.title }
     end
 
     assert_redirected_to template_path(assigns(:template))
@@ -35,7 +35,7 @@ class TemplatesControllerTest < ActionController::TestCase
   end
 
   test "should update template" do
-    put :update, id: @template, template: { title: @template.title }
+    put :update, id: @template, template: { slug: @template.slug, title: @template.title }
     assert_redirected_to template_path(assigns(:template))
   end
 

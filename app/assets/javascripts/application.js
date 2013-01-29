@@ -15,6 +15,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require_directory ./redactor
 //= require_self
 //= require kf
 Kf = Ember.Application.create();
