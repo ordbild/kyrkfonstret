@@ -1,3 +1,4 @@
-Kf.DocumentController = Ember.ObjectController.extend({
+
+App.DocumentController = Ember.ObjectController.extend({
 
 });

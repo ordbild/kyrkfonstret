@@ -1,0 +1,91 @@
+
+  @font-face {
+    font-family: 'Foundry Sterling';
+    src: url('/assets//Foustbko.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /*// @font-face {
+  //   font-family: 'Foundry Sterling';
+  //   src: url('/public/fonts/foustdmo-webfont.ttf') format('truetype');
+  //   font-weight: bold;
+  //   font-style: normal;
+  // }
+
+  // @font-face {
+  //   font-family: 'Foundry Sterling';
+  //   src: url('/public/fonts/foustito-webfont.ttf') format('truetype');
+  //   font-weight: normal;
+  //   font-style: italic;
+  // }*/
+
+  body {
+    background: #eee url('/image.png');
+    font-family: 'Foundry Sterling';
+    font-weight: normal;
+    color: #000;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.25em 0 0.5em 0;
+    line-height: 1.1;
+  }
+
+  p {
+    margin: 0.25em 0 0.5em 0;
+    line-height: 1.5;
+  }
+
+  .header {
+    padding: 32px;
+    background: #ca0066;
+    height: 180px;
+  }
+
+  .symbol-container {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+  }
+
+  .symbol {
+    height: 200px;
+  }
+
+  .header-content {
+    margin-left: 200px;
+  }
+
+  .footer {
+    background: red;
+    position: absolute;
+    height: 100px;
+    bottom: 15mm;
+    left: 15mm;
+    width: 60%;
+  }

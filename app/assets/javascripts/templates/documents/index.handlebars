@@ -1,0 +1,14 @@
+<div class="modal">
+  <h2>Öppna dokument:</h2>
+
+  <ul>
+  {{#each document in controller}}
+    <li>
+      {{#linkTo "documents.show" document}}<div class="cover"></div>{{/linkTo}}
+      {{#linkTo "documents.show" document}}{{document.title}}{{/linkTo}}
+    </li>
+  {{/each}}
+  </ul>
+
+  {{ outlet }}
+</div>

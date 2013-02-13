@@ -1,0 +1,75 @@
+.infoblad {
+  // background: #000;
+
+  .header-symbol {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    img {
+      width: 140px;
+    }
+  }
+
+  .symbol {
+    position: relative;
+
+    &:hover {
+      outline: 2px dashed #6aa4ca;
+    }
+  }
+
+  .header-editor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 200px;
+    padding-top: 30px;
+  }
+
+  .document-header {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    height: 250px;
+
+    &:hover {
+      outline: 2px dashed #6aa4ca;
+    }
+  }
+
+  .main-editor {
+    margin: 40px 200px 0 30px;
+  }
+
+  .footer-content {
+    // background: #eee;
+    position: absolute;
+    // height: 100px;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+  }
+
+  .logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .assembly {
+    font-size: 12px;
+    text-transform: uppercase;
+
+    select {
+      width: 100%;
+    }
+  }
+}

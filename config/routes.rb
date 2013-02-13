@@ -1,10 +1,12 @@
 KF::Application.routes.draw do
+  resources :assemblies
+
+
   devise_for :users
+  
+  match 'documents/print' => 'documents#print'
 
   resources :documents
-
-
-  resources :templates
 
 
   # The priority is based upon order of creation:

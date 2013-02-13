@@ -39,4 +39,8 @@ KF::Application.configure do
 
   # Devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  ENV['DOCRAPTOR_API_KEY'] = "TYxPTSfbhcD1XuZFNR"
+
+  # config.quiet_assets = false
 end

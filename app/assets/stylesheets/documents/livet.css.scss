@@ -1,0 +1,30 @@
+.livet {
+  position: relative;
+
+  .main-content {
+    background: #e8328c;
+    color: #fff;
+    height: 920px;
+  }
+
+  .main-editor {
+    margin: 0 3em 0 0;
+  }
+
+  .footer {
+    // background: #fff url(/assets/livet-bottom.png) bottom no-repeat;
+    // background: red;
+    // position: absolute;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: #000;
+    // height: 120px;
+    text-align: right;
+
+    p {
+      margin: 0;
+      padding: 1em 3em 0 0;
+    }
+  }
+}

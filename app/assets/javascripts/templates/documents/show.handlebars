@@ -1,0 +1,10 @@
+
+{{#if model.slug }}
+  <div class="document-container">
+    <div class="document portrait">
+      {{ view App.DocumentView templateNameBinding="model.slug" class="document-inner" }}
+    </div>
+  </div>
+{{ else }}
+  Laddar…
+{{/if}}

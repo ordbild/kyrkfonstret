@@ -1,5 +1,5 @@
 @import "compass";
-// @import "redactor";
+@import "susy";
 
 $fonts-path: '';
 
@@ -33,17 +33,71 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+a {
+  color: #124c8c;
+  text-decoration: none;
+
+  &:hover {
+
+  }
+}
+
+.modal {
+  @include container;
+  // width: 760px;
+  // margin: 0 auto;
+  // padding: 1em 2em;
+  padding-top: 0.5em;
+  background: #ffffff;
+  // @include box-sizing(border-box);
+
+  .cover {
+    background: #efefef;
+    border: 1px solid #494433;
+    width: 224px;
+    height: 331px;
+  }
+
+  ul {
+    @include pie-clearfix;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    @include span-columns(3);
+    @include nth-omega(4);
+    // width: 200px;
+    // float: left;
+    margin-bottom: 2em;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .document {
   position: relative;
-  $width: 210mm;
-  $height: 297mm;
+  $padding: 15mm;
+  $width: (210mm - ($padding * 2));
+  $height: (297mm - ($padding * 2));
   color: #000;
   font-family: 'Foundry Sterling';
+  font-size: 16px;
 
-  @include box-sizing(border-box);
   background: #fff;
   margin: 3em auto;
-  padding: 15mm;
+  padding: $padding;
+  overflow: hidden;
+
+  .document-inner {
+    position: relative;
+    // height: 100%;
+    height: $height;
+    // margin: 15mm;
+  }
 
   &.portrait {
     width: $width;
@@ -56,7 +110,7 @@ body {
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   h2 {
@@ -75,11 +129,12 @@ body {
     font-size: 18px;
   }
 
-  h3 {
+  h6 {
     font-size: 16px;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
     margin: 0.25em 0 0.5em 0;
     line-height: 1.1;
   }
@@ -87,6 +142,43 @@ body {
   p {
     margin: 0.25em 0 0.5em 0;
     line-height: 1.5;
+  }
+}
+
+.color-picker {
+  $bg-color: #ccc;
+  // display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5em;
+  margin: 0;
+  z-index: 10;
+  width: 100px;
+  background: $bg-color;
+  border-top: 1px solid ligthen($bg-color, 20%);
+  border-left: 1px solid ligthen($bg-color, 20%);
+  border-right: 1px solid darken($bg-color, 20%);
+  border-bottom: 1px solid darken($bg-color, 20%);
+  @include border-radius(3px);
+  // height: 50px;
+  // width: 100px;
+
+  list-style: none;
+
+  line-height: 0;
+
+  li {
+    border-bottom: 1px solid ligthen($bg-color, 10%);
+    border-right: 1px solid ligthen($bg-color, 10%);
+    border-top: 1px solid darken($bg-color, 10%);
+    border-left: 1px solid darken($bg-color, 10%);
+
+    width: 20px;
+    height: 20px;
+    margin: 2px 2px 2px 2px;
+    display: inline-block;
+    cursor: pointer;
   }
 }
 
@@ -117,34 +209,4 @@ body {
     display: inline;
     margin-right: 1em; 
   }
-}
-
-.header {
-  position: relative;
-  padding: 32px;
-  background: #ca0066;
-  height: 180px;
-}
-
-.header-content {
-  margin-left: 200px;
-}
-
-.symbol-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.symbol {
-  height: 200px;
-}
-
-.footer-content {
-  background: red;
-  position: absolute;
-  height: 100px;
-  bottom: 15mm;
-  left: 15mm;
-  width: 60%;
 }

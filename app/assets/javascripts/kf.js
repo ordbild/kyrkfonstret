@@ -7,4 +7,4 @@
 //= require_tree ./routes
 //= require_self
 
-Kf.initialize();
+App.initialize();

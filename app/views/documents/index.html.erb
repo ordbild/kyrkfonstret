@@ -4,8 +4,7 @@
   <tr>
     <th>Title</th>
     <th>User</th>
-    <th>Template</th>
-    <th>Content</th>
+    <th>Slug</th>
     <th>Cover image</th>
     <th>Public</th>
     <th></th>
@@ -17,8 +16,7 @@
   <tr>
     <td><%= document.title %></td>
     <td><%= document.user %></td>
-    <td><%= document.template.title %></td>
-    <td><%= document.content %></td>
+    <td><%= document.slug %></td>
     <td><%= image_tag document.cover_image.thumb('100x100').url if document.cover_image %></td>
     <td><%= document.public %></td>
     <td><%= link_to 'Show', document %></td>

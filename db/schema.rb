@@ -11,29 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130128093812) do
+ActiveRecord::Schema.define(:version => 20130212121027) do
+
+  create_table "assemblies", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "documents", :force => true do |t|
     t.string   "title"
     t.integer  "user_id"
-    t.integer  "template_id"
-    t.text     "content"
     t.string   "cover_image_uid"
     t.string   "cover_image_name"
     t.boolean  "public"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-  end
-
-  add_index "documents", ["template_id"], :name => "index_documents_on_template_id"
-  add_index "documents", ["user_id"], :name => "index_documents_on_user_id"
-
-  create_table "templates", :force => true do |t|
-    t.string   "title"
+    t.text     "header"
+    t.text     "main"
+    t.text     "footer"
+    t.string   "primary_color"
+    t.string   "secondary_color"
+    t.integer  "assembly_id"
     t.string   "slug"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
+
+  add_index "documents", ["assembly_id"], :name => "index_documents_on_assembly_id"
+  add_index "documents", ["user_id"], :name => "index_documents_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

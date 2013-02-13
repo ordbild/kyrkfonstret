@@ -1,0 +1,72 @@
+$fonts-path: '../';
+
+@font-face {
+  font-family: 'Foundry Sterling';
+  src: url($fonts-path + 'foustbko-webfont.eot');
+  src: local('☺'), url($fonts-path + 'foustbko-webfont.woff') format('woff'), url($fonts-path + 'foustbko-webfont.ttf') format('truetype'), url($fonts-path + 'foustbko-webfont.svg#webfontRZi4MKMP') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Foundry Sterling';
+  src: url($fonts-path + 'foustdmo-webfont.eot');
+  src: local('☺'), url($fonts-path + 'foustdmo-webfont.woff') format('woff'), url($fonts-path + 'foustdmo-webfont.ttf') format('truetype'), url($fonts-path + 'foustdmo-webfont.svg#webfontzF1jjzZt') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Foundry Sterling';
+  src: url($fonts-path + 'foustito-webfont.eot');
+  src: local('☺'), url($fonts-path + 'foustito-webfont.woff') format('woff'), url($fonts-path + 'foustito-webfont.ttf') format('truetype'), url($fonts-path + 'foustito-webfont.svg#webfontK6Z0j02g') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@page {
+  size: A4;
+  margin: 15mm;
+}
+
+body {
+  color: #000;
+  font-family: 'Foundry Sterling';
+  font-size: 16px;
+  background: #fff;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0.25em 0 0.5em 0;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0.25em 0 0.5em 0;
+  line-height: 1.5;
+}

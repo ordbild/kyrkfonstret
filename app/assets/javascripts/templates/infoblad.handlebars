@@ -1,0 +1,35 @@
+{{ view App.DocumentHeaderView modelBinding="model" setAttr="model.primaryColor" }}
+
+<div class="header-symbol">
+  {{ view App.SymbolView modelBinding="model" setAttr="model.secondaryColor" }}
+</div>
+
+<div class="header-editor">
+  {{ view App.RedactorView valueBinding='header' options='headerOptions' }}
+</div>
+
+<div class="main-editor">
+  {{ view App.RedactorView valueBinding='main' options='mainOptions' }}
+</div>
+
+<div class="footer-content">
+  {{ view App.RedactorView valueBinding='footer' options='footerOptions' }}
+</div>
+
+{{ view }}
+<div class="logo">
+  <img src="/assets/logo/Sk_logo_CMYK.svg" alt="Logo">
+
+  <div class="assembly">
+    {{#view App.AssemblyTitle }}
+      {{model.assembly.title}}
+    {{/view}}
+
+    {{view App.AssemblySelect viewName="select"
+                  contentBinding="App.assemblyController"
+                  optionLabelPath="content.title"
+                  optionValuePath="content.id"
+                  prompt="Välj församling:"
+                  selectionBinding="model.assembly"}}
+  </div>
+</div>

@@ -19,4 +19,6 @@
 //= require kf
 //= require_tree .
 
-Kf = Ember.Application.create();
+App = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});

@@ -1,18 +1,11 @@
 class Document < ActiveRecord::Base
   belongs_to :user
-  belongs_to :template
-  attr_accessible :cover_image, :template_id, :content, :retained_cover_image, :remove_cover_image, :cover_image_name, :cover_image_uid, :public, :title
-  serialize :content
+  has_many :assemblies
+
+  attr_accessible :image_url, :cover_image, :cover_image_url, :retained_cover_image, :remove_cover_image, :cover_image_name, :cover_image_uid
+  attr_accessible :public, :title, :slug, :footer, :header, :main, :primary_color, :secondary_color, :assembly_id
+
   image_accessor :cover_image
 
-  def structure
-    base_path = "app/assets/templates/"
-    full_path = "#{base_path}#{template.slug}.html"
-
-    if File.exist?(full_path)
-      return File.read(full_path)
-    else
-      return nil
-    end
-  end
+  attr_accessor :image_url
 end

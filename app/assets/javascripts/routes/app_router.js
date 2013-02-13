@@ -1,19 +1,16 @@
-Kf.Router.map(function() {
-  this.resource('documents');
-  this.resource('document', { path: 'document/:document_id' });
+App.Router.map(function() {
+  this.resource('documents', function() {
+    this.route('show', { path: '/:document_id' });
+    this.route('select');
+  });
 });
 
-Kf.IndexRoute = Ember.Route.extend({
+App.ApplicationRoute = Ember.Route.extend({
+
+});
+
+App.IndexRoute = Ember.Route.extend({
   // redirect: function() {
-  //   this.transitionTo('documents');
-  // }
-});
-
-Kf.DocumentRoute = Ember.Route.extend({
-  renderTemplate: function() {
-    this.render({ outlet: 'document' });
-  }
-  // setupController: function(controller, context) {
-  //   console.log(controller, context);
+  //   this.transitionTo('guides');
   // }
 });

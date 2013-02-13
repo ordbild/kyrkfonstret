@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  slug: MyString
+  header: MyText
+  main: MyText
+  footer: MyText
+  primary_color: MyString
+  secondary_color: MyString
+  public: false
+  cover_image_uid: MyString
+  cover_image_name: MyString
+
+two:
+  title: MyString
+  slug: MyString
+  header: MyText
+  main: MyText
+  footer: MyText
+  primary_color: MyString
+  secondary_color: MyString
+  public: false
+  cover_image_uid: MyString
+  cover_image_name: MyString

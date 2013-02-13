@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -17,6 +17,7 @@ group :assets do
   # Compass
   gem 'compass'
   gem 'compass-rails'
+  gem 'susy'
   
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -24,11 +25,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'#, :git => 'git@github.com:rails/jquery-rails.git'
+gem 'jquery-rails', :git => 'https://github.com/rails/jquery-rails.git'
 
+gem 'rails-i18n'
 
 # Ember
-gem 'ember-rails', :git => 'git://github.com/emberjs/ember-rails.git'
+gem 'ember-rails', :git => 'https://github.com/emberjs/ember-rails.git'
 
 # Dragonfly
 gem 'rack-cache', :require => 'rack/cache'
@@ -37,8 +39,10 @@ gem 'dragonfly', '~>0.9.12'
 # Auth
 gem 'devise'
 
+# PDF
+gem 'doc_raptor'
+
 # Redactor
-# gem 'redactor-rails', :git => 'git@github.com:SammyLin/redactor-rails.git'
 gem 'carrierwave'
 gem 'mini_magick'
 
@@ -49,7 +53,8 @@ gem 'mini_magick'
 gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', :group => :development
+gem 'quiet_assets', :group => :development
 
 # Deploy with Capistrano
 # gem 'capistrano'

@@ -1,4 +1,4 @@
-<%= form_for(@template) do |f| %>
+<%= form_for(@template, :html => {:multipart => true} ) do |f| %>
   <% if @template.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
@@ -18,6 +18,41 @@
   <div class="field">
     <%= f.label :slug %><br />
     <%= f.text_field :slug %>
+  </div>
+  <div class="field">
+    <%= f.label :header %><br />
+    <%= f.text_field :header %>
+  </div>
+  <div class="field">
+    <%= f.label :main %><br />
+    <%= f.text_field :main %>
+  </div>
+  <div class="field">
+    <%= f.label :footer %><br />
+    <%= f.text_field :footer %>
+  </div>
+  <div class="field">
+    <%= f.label :primary_color %><br />
+    <%= f.text_field :primary_color %>
+  </div>
+  <div class="field">
+    <%= f.label :secondary_color %><br />
+    <%= f.text_field :secondary_color %>
+  </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :cover_image %><br />
+    <%= f.hidden_field :retained_cover_image %>
+    <%= image_tag @template.cover_image.thumb('100x100').url if @template.cover_image_uid %><br>
+    <%= f.file_field :cover_image %>
+  </div>
+  <div class="field">
+    <%= f.label :remove_cover_image %><br />
+    <%= f.check_box :remove_cover_image %>
+  </div>
+  <div class="field">
+    <%= f.label :public %><br />
+    <%= f.check_box :public %>
   </div>
   <div class="actions">
     <%= f.submit %>

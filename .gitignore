@@ -18,4 +18,13 @@
 
 config/database.yml
 
+# ignore assets generated on the local machine
 public/assets
+public/system/dragonfly
+
+# ignore locally stored stuff in vendor
+vendor/bin/
+vendor/bundler/
+vendor/cache/
+vendor/gems/
+vendor/specifications/

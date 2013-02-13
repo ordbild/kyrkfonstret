@@ -1,21 +1,14 @@
 <div class="menubar">
   <ul>
-    <li>{{#linkTo "index"}}Index{{/linkTo}}</li>
-    <li>{{#linkTo "documents"}}Nytt{{/linkTo}}</li>
-    <li><a href="/#/document/1">Öppna</a></li>
-    <li class="save"><a {{action "save"}}>Spara</a></li>
-    <li class="print"><a href="javascript:void(null);">Skriv ut</a></li>
-    <li class="logout"><a href="javascript:void(null);">Logga ut</a></li>
+    <li>{{#linkTo "documents.select"}}Nytt{{/linkTo}}</li>
+    <li>{{#linkTo "documents"}}Öppna{{/linkTo}}</li>
+    <li><a href="#" {{ action "save" }}>Spara</a></li>
+    <li><a href="#" {{ action "print"}}>Skriv ut</a></li>
+    <li><a href="#">Logga ut</a></li>
   </ul>
   <div class="external-header-toolbar"></div>
   <div class="external-main-toolbar"></div>
   <div class="external-footer-toolbar"></div>
 </div>
 
-{{outlet}}
-
-<form id="document-form" action="http://redactor.dev/pdf.php" method="post">
-  <div class="document portrait">
-    {{outlet document}}
-  </div>
-</form>
+{{ outlet }}

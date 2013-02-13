@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  document: 
+  header: MyText
+  main: MyText
+  footer: MyText
+  primary_color: MyString
+  secondary_color: MyString
+  assembly: 
+
+two:
+  document: 
+  header: MyText
+  main: MyText
+  footer: MyText
+  primary_color: MyString
+  secondary_color: MyString
+  assembly: 

@@ -1,0 +1,16 @@
+<div class="modal">
+  <h2>Skapa nytt dokument:</h2>
+
+  <ul>
+  {{#each doc in controller}}
+    <li>
+      {{#linkTo "documents.show" doc}}
+        <div class="cover">
+          <img {{bindAttr src="doc.imageUrl"}} alt="">
+        </div>
+      {{/linkTo}}
+      <p>{{#linkTo "documents.show" doc}}{{doc.title}}{{/linkTo}}</p>
+    </li>
+  {{/each}}
+  </ul>
+</div>
